@@ -23,8 +23,7 @@ void squeeze(char s1[], char s2[]) {
         ;
     }
     oldIdx = newIdx = 0;
-    state = OUT;
-    while (s1[oldIdx] != '\0') {
+    for (state = OUT; s1[oldIdx] != '\0'; state = OUT) {
         for (int i = 0; i < s2Len; ++i) {
             if (s1[oldIdx] == s2[i]) {
                 state = IN;
@@ -36,7 +35,6 @@ void squeeze(char s1[], char s2[]) {
         } else if (state == IN) {
             ++oldIdx;
         }
-        state = OUT;
     }
     s1[newIdx] = '\0';
 }
