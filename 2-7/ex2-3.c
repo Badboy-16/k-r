@@ -15,6 +15,7 @@ int main() {
     printf("0X4FB: %d\n", htoi("0X4FB"));
     printf("c3: %d\n", htoi("c3"));
     printf("58A: %d\n", htoi("58A"));
+    printf("f: %d\n", htoi("f"));
     return 0;
 }
 
