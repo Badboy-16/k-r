@@ -40,7 +40,7 @@ void entab(void)
             if (state == IN) {
                 state = OUT;
                 nrt = nc / TABS - (nc - nb) / TABS;
-                for (int i = 0; i < nc / TABS - (nc - nb) / TABS; i++)
+                for (int i = 0; i < nrt; i++)
                     putchar('\t');
                 if (nrt)
                     for (int i = 0; i < nc % TABS; i++)
